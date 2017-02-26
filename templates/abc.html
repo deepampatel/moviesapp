@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Your Movie</title>
+<style>
+div.s8{
+	background-color:black;
+	margin-right:2px;
+	margin-left:2px;
+	padding-left:50px;
+	padding-right:50px;
+	height:20px;
+	color:white;
+	text-size:1px;
+}
+
+div.s1{
+	background-color:black;
+    	border: 1px;
+    	padding: 1px;
+    	color:white;
+	text-align:center;
+	font-family:"Times New Roman";
+	font-size:15px;
+	font-weight: bold;
+}
+div.s2{
+	background-color:lightblue;
+    	border: 1px;
+    	padding: 1px;
+    	color:black;
+	text-align:center;
+	font-family:"Times New Roman";
+	font-size:15px;
+	font-weight: bold;
+}
+div.s3{
+	background-color:pink;
+    	border: 1px;
+    	padding: 1px;
+    	color:black;
+	text-align:center;
+	font-family:"Times New Roman";
+	font-size:15px;
+	font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+<div class="s1">
+<h1>Title : {{title}}
+</div>
+
+<div class="s2">
+<br>	<img src="http://image.tmdb.org/t/p/w185/{{ poster }}">
+</div>
+
+<div class="s2">
+<h2>Release Date:{{release_Date}}
+</div>
+<div class="s3"><h2>Overview:{{overview}}</div>
+<div class="s2">
+<h2>Average Vote:{{average_vote}}
+</div>
+
+<div class="s3">
+	<h1 align="center">Search here for another movie:
+  <form action = "http://127.0.0.1:5000/getname" method = "post">
+<input type="text" name="name"> </h1>
+<center><input type="submit" value="search">
+</form>
+</div>
+</body>
+</html>
